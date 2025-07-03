@@ -1,0 +1,160 @@
+---
+title: "Defensa de proyecto de tesis"
+subtitle: "Dinámica espacial del paisaje y su rol en la resiliencia hídrica en la cuenca del río Aconcagua"
+author: "Joaquín Riquelme Alarcón"
+format: 
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: images/Acreditacion_Doctorado_Ecologiaintegrativa.png
+    css: styles.css
+    #footer: 'Dinámica espacial del paisaje y su rol en la resiliencia hídrica en la cuenca del río Aconcagua'
+
+editor: visual
+---
+
+## Introducción {auto-animate="true"}
+
+Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+
+``` r
+# Define a server for the Shiny app
+function(input, output) {
+  
+  # Fill in the spot we created for a plot
+  output$phonePlot <- renderPlot({
+    # Render a barplot
+  })
+}
+```
+
+::: footer
+Learn more: [Syntax Highlighting](https://{{< meta prerelease-subdomain >}}quarto.org/docs/output-formats/html-code.html#highlighting)
+:::
+
+
+## Pregunta de investigación
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+
+``` {.python code-line-numbers="4-5|7|10"}
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+
+## Hipótesis y Objetivos
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+```{r}
+#| echo: true
+#| fig-width: 10
+#| fig-height: 4.5
+library(ggplot2)
+ggplot(mtcars, aes(hp, mpg, color = am)) +
+  geom_point() +
+  geom_smooth(formula = y ~ x, method = "loess")
+```
+
+
+## Métodos
+
+[MathJax](https://www.mathjax.org/) rendering of equations to HTML
+
+::: columns
+::: {.column width="40%"}
+``` tex
+\begin{gather*}
+a_1=b_1+c_1\\
+a_2=b_2+c_2-d_2+e_2
+\end{gather*}
+
+\begin{align}
+a_{11}& =b_{11}&
+  a_{12}& =b_{12}\\
+a_{21}& =b_{21}&
+  a_{22}& =b_{22}+c_{22}
+\end{align}
+```
+:::
+
+::: {.column width="60%"}
+```{=tex}
+\begin{gather*}
+a_1=b_1+c_1\\
+a_2=b_2+c_2-d_2+e_2
+\end{gather*}
+```
+```{=tex}
+\begin{align}
+a_{11}& =b_{11}&
+  a_{12}& =b_{12}\\
+a_{21}& =b_{21}&
+  a_{22}& =b_{22}+c_{22}
+\end{align}
+```
+:::
+:::
+
+::: footer
+Learn more: [LaTeX Equations](https://{{< meta prerelease-subdomain >}}quarto.org/docs/authoring/markdown-basics.html#equations)
+:::
+
+## Plan de trabajo {.smaller}
+
+Arrange content into columns of varying widths:
+
+
+::: columns
+::: {.column width="35%"}
+#### Motor Trend Car Road Tests
+
+The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="62%"}
+```{r}
+knitr::kable(head(mtcars)[,c("mpg",	"cyl", "disp", "hp", "wt")])
+```
+:::
+:::
+
+::: footer
+Learn more: [Multiple Columns](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/#multiple-columns)
+::: 
+
+## Resultados de investigación
+
+
+::: incremental
+-   First item
+-   Second item
+-   Third item
+:::
+
+. . .
+
+<br/> Insert pauses to make other types of content display incrementally.
+
+::: footer
+Learn more: [Incremental Lists](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/#incremental-lists)
+:::
+
+## Referencias
+

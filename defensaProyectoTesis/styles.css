@@ -1,0 +1,14 @@
+.reveal .slide-logo {
+  height: 60px !important;
+  width: 240px !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
+
+.border {
+  border: 1px solid #dee2e6;
+}
+
+.border-thick {
+  border-width: 3px;
+}
