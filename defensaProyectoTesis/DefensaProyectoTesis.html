@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="es"><head>
 <script src="DefensaProyectoTesis_files/libs/clipboard/clipboard.min.js"></script>
 <script src="DefensaProyectoTesis_files/libs/quarto-html/tabby.min.js"></script>
 <script src="DefensaProyectoTesis_files/libs/quarto-html/popper.min.js"></script>
@@ -94,7 +94,27 @@
     code span.va { color: #111111; } /* Variable */
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="DefensaProyectoTesis_files/libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="styles.css">
   <link href="DefensaProyectoTesis_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -408,7 +428,7 @@ Joaquín Riquelme Alarcón
 </section>
 <section id="introducción" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Introducción</h2>
-<p>Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <a href="https://quarto.org/docs/presentations/" class="uri">https://quarto.org/docs/presentations/</a>.</p>
+<p>Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <a href="https://quarto.org/docs/presentations/" class="uri">https://quarto.org/docs/presentations/</a>. <span class="citation" data-cites="alamos_influence_2024">(<a href="#/referencias" role="doc-biblioref" onclick="">Álamos et&nbsp;al. 2024</a>)</span></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="co"># Define a server for the Shiny app</span></span>
 <span id="cb1-2" class="hljs-ln-code"><a href=""></a><span class="cf">function</span>(input, output) {</span>
 <span id="cb1-3" class="hljs-ln-code"><a href=""></a>  </span>
@@ -416,7 +436,7 @@ Joaquín Riquelme Alarcón
 <span id="cb1-5" class="hljs-ln-code"><a href=""></a>  output<span class="sc">$</span>phonePlot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
 <span id="cb1-6" class="hljs-ln-code"><a href=""></a>    <span class="co"># Render a barplot</span></span>
 <span id="cb1-7" class="hljs-ln-code"><a href=""></a>  })</span>
-<span id="cb1-8" class="hljs-ln-code"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-8" class="hljs-ln-code"><a href=""></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="footer">
 <p>Learn more: <a href="https://?meta:prerelease-subdomainquarto.org/docs/output-formats/html-code.html#highlighting">Syntax Highlighting</a></p>
 </div>
@@ -437,7 +457,7 @@ Joaquín Riquelme Alarcón
 <span id="cb2-7"><a href=""></a>ax.plot(theta, r)</span>
 <span id="cb2-8"><a href=""></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
 <span id="cb2-9"><a href=""></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb2-10"><a href=""></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-10"><a href=""></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="hipótesis-y-objetivos" class="slide level2">
 <h2>Hipótesis y Objetivos</h2>
@@ -446,7 +466,7 @@ Joaquín Riquelme Alarcón
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb3-2"><a href=""></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(hp, mpg, <span class="at">color =</span> am)) <span class="sc">+</span></span>
 <span id="cb3-3"><a href=""></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb3-4"><a href=""></a>  <span class="fu">geom_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">method =</span> <span class="st">"loess"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-4"><a href=""></a>  <span class="fu">geom_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">method =</span> <span class="st">"loess"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="DefensaProyectoTesis_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
@@ -465,18 +485,17 @@ Joaquín Riquelme Alarcón
 <span id="cb4-8"><a href=""></a><span class="ss">  a_{12}&amp; =b_{12}</span><span class="sc">\\</span></span>
 <span id="cb4-9"><a href=""></a><span class="ss">a_{21}&amp; =b_{21}&amp;</span></span>
 <span id="cb4-10"><a href=""></a><span class="ss">  a_{22}&amp; =b_{22}+c_{22}</span></span>
-<span id="cb4-11"><a href=""></a><span class="kw">\end</span>{<span class="ex">align</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-11"><a href=""></a><span class="kw">\end</span>{<span class="ex">align</span>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:60%;">
-<span class="math display">\[\begin{gather*}
+<p><span class="math display">\[\begin{gather*}
 a_1=b_1+c_1\\
 a_2=b_2+c_2-d_2+e_2
-\end{gather*}\]</span>
-<span class="math display">\[\begin{align}
+\end{gather*}\]</span> <span class="math display">\[\begin{align}
 a_{11}&amp; =b_{11}&amp;
   a_{12}&amp; =b_{12}\\
 a_{21}&amp; =b_{21}&amp;
   a_{22}&amp; =b_{22}+c_{22}
-\end{align}\]</span>
+\end{align}\]</span></p>
 </div></div>
 <div class="footer">
 <p>Learn more: <a href="https://?meta:prerelease-subdomainquarto.org/docs/authoring/markdown-basics.html#equations">LaTeX Equations</a></p>
@@ -579,8 +598,13 @@ a_{21}&amp; =b_{21}&amp;
 </div>
 </div>
 </section>
-<section id="referencias" class="slide level2">
+<section id="referencias" class="slide level2 smaller scrollable">
 <h2>Referencias</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-alamos_influence_2024" class="csl-entry" role="listitem">
+Álamos, Nicolás, Camila Alvarez-Garreton, Ariel Muñoz, y Álvaro González-Reyes. 2024. <span>«The influence of human activities on streamflow reductions during the megadrought in central <span>Chile</span>»</span>. <em>Hydrology and Earth System Sciences</em> 28 (11): 2483-503. <a href="https://doi.org/10.5194/hess-28-2483-2024">https://doi.org/10.5194/hess-28-2483-2024</a>.
+</div>
+</div>
 <div class="quarto-auto-generated-content">
 <p><img src="images/Acreditacion_Doctorado_Ecologiaintegrativa.png" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -878,12 +902,12 @@ a_{21}&amp; =b_{21}&amp;
         // flash "checked"
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "Copied!");
+        button.setAttribute("title", "Copiado");
         let tooltip;
         if (window.bootstrap) {
           button.setAttribute("data-bs-toggle", "tooltip");
           button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copied!");
+          button.setAttribute("data-bs-title", "Copiado");
           tooltip = new bootstrap.Tooltip(button, 
             { trigger: "manual", 
               customClass: "code-copy-button-tooltip",

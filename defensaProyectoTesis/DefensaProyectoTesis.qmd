@@ -2,6 +2,8 @@
 title: "Defensa de proyecto de tesis"
 subtitle: "Dinámica espacial del paisaje y su rol en la resiliencia hídrica en la cuenca del río Aconcagua"
 author: "Joaquín Riquelme Alarcón"
+lang: "es"
+bibliography: references.bib
 format: 
   revealjs: 
     slide-number: true
@@ -17,7 +19,7 @@ editor: visual
 
 ## Introducción {auto-animate="true"}
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>. [@alamos_influence_2024]
 
 ``` r
 # Define a server for the Shiny app
@@ -33,7 +35,6 @@ function(input, output) {
 ::: footer
 Learn more: [Syntax Highlighting](https://{{< meta prerelease-subdomain >}}quarto.org/docs/output-formats/html-code.html#highlighting)
 :::
-
 
 ## Pregunta de investigación
 
@@ -55,10 +56,10 @@ ax.grid(True)
 plt.show()
 ```
 
-
 ## Hipótesis y Objetivos
 
 When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
 ```{r}
 #| echo: true
 #| fig-width: 10
@@ -69,12 +70,11 @@ ggplot(mtcars, aes(hp, mpg, color = am)) +
   geom_smooth(formula = y ~ x, method = "loess")
 ```
 
-
 ## Métodos
 
 [MathJax](https://www.mathjax.org/) rendering of equations to HTML
 
-::: columns
+::::: columns
 ::: {.column width="40%"}
 ``` tex
 \begin{gather*}
@@ -92,22 +92,18 @@ a_{21}& =b_{21}&
 :::
 
 ::: {.column width="60%"}
-```{=tex}
 \begin{gather*}
 a_1=b_1+c_1\\
 a_2=b_2+c_2-d_2+e_2
 \end{gather*}
-```
-```{=tex}
 \begin{align}
 a_{11}& =b_{11}&
   a_{12}& =b_{12}\\
 a_{21}& =b_{21}&
   a_{22}& =b_{22}+c_{22}
 \end{align}
-```
 :::
-:::
+:::::
 
 ::: footer
 Learn more: [LaTeX Equations](https://{{< meta prerelease-subdomain >}}quarto.org/docs/authoring/markdown-basics.html#equations)
@@ -117,8 +113,7 @@ Learn more: [LaTeX Equations](https://{{< meta prerelease-subdomain >}}quarto.or
 
 Arrange content into columns of varying widths:
 
-
-::: columns
+:::::: columns
 ::: {.column width="35%"}
 #### Motor Trend Car Road Tests
 
@@ -133,14 +128,13 @@ The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel
 knitr::kable(head(mtcars)[,c("mpg",	"cyl", "disp", "hp", "wt")])
 ```
 :::
-:::
+::::::
 
 ::: footer
 Learn more: [Multiple Columns](https://{{< meta prerelease-subdomain >}}quarto.org/docs/presentations/revealjs/#multiple-columns)
-::: 
+:::
 
 ## Resultados de investigación
-
 
 ::: incremental
 -   First item
@@ -158,3 +152,6 @@ Learn more: [Incremental Lists](https://{{< meta prerelease-subdomain >}}quarto.
 
 ## Referencias
 
+::: {#refs}
+
+:::
